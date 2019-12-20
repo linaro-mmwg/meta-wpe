@@ -3,9 +3,9 @@
 
 WEBKITBROWSER_AUTOSTART ?= "true"
 WEBKITBROWSER_MEDIADISKCACHE ?= "false"
-WEBKITBROWSER_MEMORYPRESSURE ?= "databaseprocess:50m,networkprocess:100m,webprocess:300m,rpcprocess:80m"
-WEBKITBROWSER_MEMORYPROFILE ?= "128m"
-WEBKITBROWSER_MSEBUFFERS ?= "audio:2m,video:15m,text:1m"
+WEBKITBROWSER_MEMORYPRESSURE ?= "databaseprocess:100m,networkprocess:200m,webprocess:600m,rpcprocess:160m"
+WEBKITBROWSER_MEMORYPROFILE ?= "768m"
+WEBKITBROWSER_MSEBUFFERS ?= "audio:10m,video:128m,text:10m"
 WEBKITBROWSER_STARTURL ?= "http://localhost:8080/index.html"
 WEBKITBROWSER_USERAGENT ?= "Mozilla/5.0 (Macintosh, Intel Mac OS X 10_11_4) AppleWebKit/602.1.28+ (KHTML, like Gecko) Version/9.1 Safari/601.5.17"
 WEBKITBROWSER_RESOLUTION ?= "1080p"
