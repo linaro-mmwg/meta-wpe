@@ -9,7 +9,7 @@ require include/wpeframework.inc
 require include/compositor.inc
 
 
-DEPENDS = "zlib python-jsonref-native virtual/egl ${WPE_COMPOSITOR_DEP}"
+DEPENDS = "zlib python-jsonref-native virtual/egl ${WPE_COMPOSITOR_DEP} gstreamer1.0-plugins-base"
 DEPENDS_append_libc-musl = " libexecinfo"
 DEPENDS += "${@bb.utils.contains('PACKAGECONFIG', 'testapp', 'gtest', '', d)}"
 
