@@ -66,7 +66,7 @@ PACKAGECONFIG[opencdmi_prnx_svp]= '-DCDMI_BCM_NEXUS_SVP=ON -DCDMI_ADAPTER_IMPLEM
 PACKAGECONFIG[websource]       = "-DPLUGIN_WEBSERVER=ON,,"
 PACKAGECONFIG[webkitbrowser]   = "-DPLUGIN_WEBKITBROWSER=ON,,"
 
-PACKAGECONFIG[sdp]   = "-DENABLE_SECURE_DATA_PATH=1,,"
+PACKAGECONFIG[sdp]   = "-DSECURE_DATA_PATH=ON,,"
 
 # FIXME, determine this a little smarter
 # Provision event is required for libprovision and provision plugin
