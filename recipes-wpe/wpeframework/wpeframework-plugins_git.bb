@@ -79,7 +79,7 @@ PACKAGECONFIG[webshell]       = "-DPLUGIN_WEBSHELL=ON,-DPLUGIN_WEBSHELL=OFF,"
 PACKAGECONFIG[wifi]           = "-DPLUGIN_WIFICONTROL=ON,-DPLUGIN_WIFICONTROL=OFF,,wpa-supplicant"
 PACKAGECONFIG[wifi_rdkhal]    = "-DPLUGIN_USE_RDK_HAL_WIFI=ON,-DPLUGIN_USE_RDK_HAL_WIFI=OFF,,wifi-hal"
 
-PACKAGECONFIG[sdp]            = "-DENABLE_SECURE_DATA_PATH=1,,"
+PACKAGECONFIG[sdp]            = "-DSECURE_DATA_PATH=ON,,"
 
 # ----------------------------------------------------------------------------
 
