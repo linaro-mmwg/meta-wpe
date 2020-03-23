@@ -36,7 +36,6 @@ PACKAGECONFIG ?= " \
     ${@bb.utils.contains('DISTRO_FEATURES', 'opencdm', 'opencdm opencdm_gst', '', d)} \
     ${@bb.utils.contains('DISTRO_FEATURES', 'playready_nexus_svp', 'opencdmi_prnx_svp', '', d)} \
     compositorclient virtualinput websource webkitbrowser \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'sdp', 'sdp', '', d)} \
     "
 
 # Buildtype
@@ -65,8 +64,6 @@ PACKAGECONFIG[opencdmi_prnx_svp]= '-DCDMI_BCM_NEXUS_SVP=ON -DCDMI_ADAPTER_IMPLEM
 # it feels a bit the other way around but lets set at least webserver and webkit
 PACKAGECONFIG[websource]       = "-DPLUGIN_WEBSERVER=ON,,"
 PACKAGECONFIG[webkitbrowser]   = "-DPLUGIN_WEBKITBROWSER=ON,,"
-
-PACKAGECONFIG[sdp]   = "-DSECURE_DATA_PATH=ON,,"
 
 # FIXME, determine this a little smarter
 # Provision event is required for libprovision and provision plugin
