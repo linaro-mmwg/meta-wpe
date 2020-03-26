@@ -27,6 +27,7 @@ inherit cmake pkgconfig systemd update-rc.d
 # Yocto root is under /home/root
 WPEFRAMEWORK_PERSISTENT_PATH = "/home/root"
 WPEFRAMEWORK_SYSTEM_PREFIX = "OE"
+WPEFRAMEWORK_AUTOSTART ?= "false"
 
 PACKAGECONFIG ?= " \
     release \
@@ -102,6 +103,9 @@ EXTRA_OECMAKE += " \
 CXXFLAGS += "${@bb.utils.contains('DISTRO_FEATURES', 'wayland', '-DWL_EGL_PLATFORM', '', d)}"
 
 do_install_append() {
+    if ${WPEFRAMEWORK_AUTOSTART}
+    then
+
     if ${@bb.utils.contains("DISTRO_FEATURES", "systemd", "true", "false", d)}
     then
         if ${@bb.utils.contains("MACHINE_FEATURES", "platformserver", "true", "false", d)}
@@ -119,6 +123,8 @@ do_install_append() {
         install -m 0755 ${WORKDIR}/wpeframework-init ${D}${sysconfdir}/init.d/wpeframework
     fi
 
+    fi
+
     if ${@bb.utils.contains("PACKAGECONFIG", "opencdm", "true", "false", d)}
     then
         #install -d ${STAGING_INCDIR}
@@ -126,7 +132,7 @@ do_install_append() {
     fi
 }
 
-SYSTEMD_SERVICE_${PN} = "wpeframework.service"
+SYSTEMD_SERVICE_${PN} = "${@bb.utils.contains('WPEFRAMEWORK_AUTOSTART', 'true', 'wpeframework.service', '', d)}"
 
 # ----------------------------------------------------------------------------
 
