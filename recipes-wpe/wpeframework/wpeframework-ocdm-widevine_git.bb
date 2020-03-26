@@ -7,7 +7,7 @@ REQUIRED_DISTRO_FEATURES = "widevine"
 
 require include/wpeframework-plugins.inc
 
-DEPENDS += " widevine"
+DEPENDS += " widevine curl"
 
 SRC_URI = "git://git@github.com/WebPlatformForEmbedded/OCDM-Widevine.git;protocol=https;branch=master"
 SRCREV = "052b138536bf209981a9360cc9ce1ae990a792ed"
