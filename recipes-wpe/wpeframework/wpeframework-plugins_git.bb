@@ -48,7 +48,7 @@ PACKAGECONFIG ?= " \
     ${@bb.utils.contains('DISTRO_FEATURES', 'widevine',             'opencdmi_wv', '', d)} \
     ${@bb.utils.contains('DISTRO_FEATURES', 'wpeframework',         'network', '', d)} \
     ${@bb.utils.contains('MACHINE_FEATURES', 'wifi',                'network wifi', '', d)} \
-    compositor deviceinfo dictionary locationsync monitor remote remote-devinput timesync tracing ux virtualinput webkitbrowser webserver youtube \
+    deviceinfo dictionary locationsync monitor remote remote-devinput timesync tracing ux virtualinput webkitbrowser webserver youtube \
 "
 
 PACKAGECONFIG[bluetooth]      = "-DPLUGIN_BLUETOOTH=ON -DPLUGIN_BLUETOOTH_AUTOSTART=false,-DPLUGIN_BLUETOOTH=OFF,,dbus-glib bluez5"
