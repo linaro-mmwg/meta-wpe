@@ -60,7 +60,7 @@ PACKAGECONFIG[locationsync]   = "-DPLUGIN_LOCATIONSYNC=ON \
                                 ,-DPLUGIN_LOCATIONSYNC=OFF,"
 PACKAGECONFIG[network]        = "-DPLUGIN_NETWORKCONTROL=ON,-DPLUGIN_NETWORKCONTROL=OFF,"
 PACKAGECONFIG[monitor]        = "-DPLUGIN_MONITOR=ON \
-                                 -DPLUGIN_WEBKITBROWSER_MEMORYLIMIT=614400 \
+                                 -DPLUGIN_WEBKITBROWSER_MEMORYLIMIT=921600 \
                                  -DPLUGIN_YOUTUBE_MEMORYLIMIT=614400 \
                                  -DPLUGIN_NETFLIX_MEMORYLIMIT=307200 \
                                 ,-DPLUGIN_MONITOR=OFF,"
